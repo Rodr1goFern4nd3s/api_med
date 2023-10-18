@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.medico.DadosCadastroMedico;
+import med.voll.api.paciente.dadosCadastroPaciente;
 
 @Embeddable
 @Getter
