@@ -1,10 +1,7 @@
 package med.voll.api.medico;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import med.voll.api.endereco.DadosEndereco;
 
 public record DadosCadastroMedico(
@@ -20,8 +17,9 @@ public record DadosCadastroMedico(
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
+        @NotNull
         Especialidade especialidade,
-        @NotBlank
+        @NotNull
         @Valid
         DadosEndereco endereco) {
 }
