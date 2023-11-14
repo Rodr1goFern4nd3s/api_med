@@ -32,7 +32,6 @@ public class MedicoController {
 
     @GetMapping("/{id}")
     public ResponseEntity detalharMedico(@PathVariable Long id) {
-        //Código 200 no detalhar
         var medico = repository.getReferenceById(id);
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
